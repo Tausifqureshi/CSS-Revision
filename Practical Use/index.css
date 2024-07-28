@@ -1,0 +1,29 @@
+h1{
+    /* place-items: center; */
+  /* text-align: center; */
+  text-align: justify;
+  /* display: ; */
+  /* translate: ; */
+  /* scale: ; */
+  /* rotate: ; */
+  display: ;
+ 
+}
+
+
+div{
+    width: 300px;
+    height: 300px;
+    border-radius: 0% 100% 100% 0% / 98% 99% 1% 2% ;
+    /* background-color: aqua; */
+    background-image: linear-gradient(to right top, #d8761e, #d5880b, #cf9900, #c6ab00, #b9bc00, #ceb800, #e2b300, #f5ad00, #ff873c, #ff5d75, #ff46b7, #fb5ffb);
+
+    /* Filter property ye shri */
+    /* filter: grayscale(); */
+    /* filter: blur(2px); */
+    /* filter: brightness(150%); */
+    /* filter: contrast(170%); */
+    /* filter: saturate(33); */
+    /* filter: invert(1); */
+    /* opacity: .5; */
+}
