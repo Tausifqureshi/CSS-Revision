@@ -1,5 +1,5 @@
 // ================================================= CSS Grid ==================================================== //
-//  ChatGPT Se liya hua Syntax --->  CSS Grid ek powerful layout system hai jo CSS mein complex aur responsive web layouts banane ke liye asani se istemal hota hai. Yeh ek two-dimensional grid-based layout system pradan karta hai, jo rows aur columns dono ko handle kar sakta hai, jabki one-dimensional Flexbox layout sirf ek row ya column ko ek samay par handle karta hai. Yahaan CSS Grid ka ek detailed vishleshan hai. 
+//  ChatGPT Se liya hua Syntax ---> CSS Grid ek powerful layout system hai jo web pages ko complex and responsive layouts create karne mein madad karta hai. Iska use karke aap ek two-dimensional grid system define kar sakte hain, jo rows aur columns ka combination hota hai
 
 
 // ============================================== Basic Concept ================================================== //

@@ -1,69 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display-Grid</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: auto 1fr auto;
+      grid-gap: 10px;
+      grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    }
+    .header {
+      grid-area: header;
+      background-color: lightblue;
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background-color: lightgreen;
+    }
+    .content {
+      grid-area: content;
+      background-color: lightcoral;
+    }
+    .footer {
+      grid-area: footer;
+      background-color: lightgoldenrodyellow;
+    }
 
-.container {
-    background-color: wheat;
-    border: 2px solid black;
-    padding: .5em;
-    width: 700px;
-    margin: 2em auto;
-    display: grid;
-    gap: 2em;
-    grid-template-rows: repeat(2, 5em);
-    grid-template-columns: repeat(5, 1fr); 
-    grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
-}
-
-.item-1 {
-    background-color: brown;
-    grid-area: header;
-}
-
-.item-2 {
-    background-color: blue;
-    grid-area: menu;
-}
-
-.item-3 {
-    background-color: blueviolet;
-    grid-area: main;
-}
-
-.item-4 {
-    background-color: chartreuse;
-    grid-area: right;
-}
-
-.item-5 {
-    background-color: cyan;
-    grid-area: footer;
-}
-
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "content"
+          "sidebar"
+          "footer";
+      }
+    }
   </style>
-
 </head>
 <body>
-    <div class="container">
-        <div class="item-1">Header</div>
-        <div class="item-2">Menu</div>
-        <div class="item-3">Main</div>
-        <div class="item-4">Right</div>
-        <div class="item-5">Footer</div>
-    
-    </div>
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+  </div>
 </body>
 </html>
