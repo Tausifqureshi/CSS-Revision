@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* Descendant Selector */
+      .parent p {
+    color: red; /* Targets all <p> elements inside .parent */
+}
+
+      /*  Child Selector (>) */
+      .parent > p {
+    color: blue; /* Targets only direct <p> children of .parent */
+}
+
+      /*   Adjacent Sibling Selector (+) */
+      h1 + p {
+    color: green; /* Targets the <p> element immediately following an <h1> */
+}
+
+
+      /*   . General Sibling Selector (~) */
+      h1 ~ p {
+    color: purple; /* Targets all <p> elements that follow an <h1> */
+}
+
+    </style>
+    <title>CSS Combinator Selectors</title>
+</head>
+<body>
+<!--  Descendant Selector -->
+<div class="parent">
+    <p class="child">This is a child paragraph.</p>
+</div>
+
+<!--   Child Selector (>) -->
+<div class="parent">
+    <p class="child">This is a child paragraph.</p>
+    <div class="another-parent">
+        <p class="child">This is another paragraph.</p>
+    </div>
+</div>
+
+<!--   Adjacent Sibling Selector (+) -->
+<h1>Title</h1>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<!-- General Sibling Selector (~) -->
+<h1>Title</h1>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+</body>
+</html>
