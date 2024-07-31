@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranform-2D</title>
+</head>
+<style>
+    body {
+  perspective: 800px; /* Defines the perspective for the 3D scene */
+}
+
+.scene {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d; /* Ensures child elements are rendered in 3D space */
+  transform: rotateX(30deg) rotateY(30deg); /* Rotate the whole scene for a 3D effect */
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d; /* Ensures faces are rendered in 3D space */
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 1s; /* Smooth transition for rotation */
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 200px;
+  font-size: 24px;
+  color: #333;
+  transform: translateZ(100px); /* Moves faces out from the center */
+}
+
+.front  { transform: rotateY(  0deg) translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.right  { transform: rotateY( 90deg) translateZ(100px); }
+.top    { transform: rotateX( 90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+</style>
+<body>
+    <div class="scene">
+        <div class="cube">
+          <div class="face front">Front</div>
+          <div class="face back">Back</div>
+          <div class="face left">Left</div>
+          <div class="face right">Right</div>
+          <div class="face top">Top</div>
+          <div class="face bottom">Bottom</div>
+        </div>
+      </div>
+      
+</body>
+</html>
