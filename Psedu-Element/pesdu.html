@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .box::before {
+      content: "Start: ";
+      color: green;
+    }
+
+    .box::after {
+      content: " :End";
+      color: red;
+    }
+
+    p::first-line {
+      font-weight: bold;
+      color: blue;
+    }
+
+    p::first-letter {
+      font-size: 2em;
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">This is a box.</div>
+  <p>This is a paragraph with styled first line and first letter.</p>
+</body>
+</html>
