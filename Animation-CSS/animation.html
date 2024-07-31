@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Animation Example</title>
+<style>
+ /* Define the animation using @keyframes */
+@keyframes moveAndChangeColor {
+  0% {
+    left: 0;
+    background-color: blue;
+  }
+  50% {
+    left: 50%;
+    background-color: green;
+  }
+  100% {
+    left: 100%;
+    background-color: red;
+  }
+}
+
+/* Apply the animation to the element */
+.animated-box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  animation-name: moveAndChangeColor;  /* Name of the animation */
+  animation-duration: 4s;              /* Duration of the animation */
+  animation-timing-function: ease-in-out; /* Speed curve */
+  animation-iteration-count: infinite; /* Repeat the animation indefinitely */
+  animation-direction: alternate;      /* Alternate direction on each cycle */
+}
+
+</style>
+</head>
+<body>
+    <div class="animated-box"></div>
+</body>
+</html>
